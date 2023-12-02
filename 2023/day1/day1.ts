@@ -7,14 +7,14 @@ const processInputFile = (filePath: string): string[] => {
 const part1 = (): number => {
   const getCalibration = (line: string): number => {
     const digitLine = line.replace(/[^\d]/g, "");
-    return Number(digitLine[0] + digitLine[digitLine.length - 1]);
+    return Number(digitLine[0] + digitLine.slice(-1));
   };
 
-  const input = processInputFile("input.txt");
+  const totalCalibration = processInputFile("input.txt")
+    .map(getCalibration)
+    .reduce((sum, calibration) => sum + calibration, 0);
 
-  const res = input
-    .map((line) => getCalibration(line))
-    .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-
-  return res;
+  return totalCalibration;
 };
+
+console.log(part1());
