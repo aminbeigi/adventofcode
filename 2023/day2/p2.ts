@@ -1,18 +1,23 @@
 import { processInputFile } from "../utils.js";
 
+interface Cube {
+  colour: string;
+  cubeCount: number;
+}
+
 const COLOURS = {
   red: "red",
   green: "green",
   blue: "blue",
 };
 
-const parseCube = (cube: string) => {
+const parseCube = (cube: string): Cube => {
   const [countString, colour] = cube.trim().split(" ");
   const cubeCount = Number(countString);
   return { colour, cubeCount };
 };
 
-const calcualtePower = (sets: string[]) => {
+const calcualtePower = (sets: string[]): number => {
   let green_max = 0;
   let red_max = 0;
   let blue_max = 0;
