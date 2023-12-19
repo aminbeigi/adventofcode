@@ -35,3 +35,5 @@ const part2 = (): number => {
 
   return totalCalibration;
 };
+
+console.log("result: ", part2());
