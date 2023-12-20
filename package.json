@@ -1,17 +1,19 @@
 {
-  "name": "adventofcode",
-  "author": "Amin Beigi",
-  "version": "9.9.9",
-  "type":"module",
-  "scripts": {
-    "build": "tsc"
-  },
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.23.0",
-    "@types/node": "^20.2.6",
-    "tsx": "^3.13.0",
-    "typescript": "^5.2.2",
-    "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.1"
-  }
+    "name": "adventofcode",
+    "author": "Amin Beigi",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "tsc && npm run copy",
+        "copy": "copyfiles -u 1 '2023/**/*.txt' build",
+        "start": "node build/day1/p1.js",
+        "dev": "npm run build && npm run start",
+        "clean": "find ./2023 -type f -name '*.js' -delete"
+    },
+    "devDependencies": {
+        "@babel/preset-typescript": "^7.23.0",
+        "@types/node": "^20.2.6",
+        "copyfiles": "^2.4.1",
+        "tsx": "^3.13.0",
+        "typescript": "^5.2.2"
+    }
 }

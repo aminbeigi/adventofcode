@@ -15,6 +15,3 @@
 ## Contributions
 Contributions are always welcome!  
 Just make a [pull request](../../pulls).
-
-## Licence
-None
