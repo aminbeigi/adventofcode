@@ -12,9 +12,6 @@
 <a href="../../pulls"><img src="https://img.shields.io/github/issues-pr/aminbeigi/adventofcode.svg?style=flat-square" /></a>
 </p>
 
-## Description
-
-Embarking on a journey to learn Typescript!
 ## Contributions
 Contributions are always welcome!  
 Just make a [pull request](../../pulls).
